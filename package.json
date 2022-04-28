@@ -1,0 +1,23 @@
+{
+  "name": "pdf-maker-by-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobinmoradi/pdf-maker-by-puppeteer.git"
+  },
+  "author": "mobin moradi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobinmoradi/pdf-maker-by-puppeteer/issues"
+  },
+  "homepage": "https://github.com/mobinmoradi/pdf-maker-by-puppeteer#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "puppeteer": "^13.7.0"
+  }
+}

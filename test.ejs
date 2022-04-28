@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body style="-webkit-print-color-adjust: exact !important;">
+        <style>
+            header,
+            footer {
+                position: fixed;
+                border: 2px solid blue;
+                display: flex;
+                justify-content: space-between;
+                width: 18cm;
+                height: 2cm;
+                align-items: center;
+                margin: 32px 24px;
+                padding: 24px;
+            }
+
+            header {
+                top: 0;
+            }
+
+            footer {
+                bottom: 0;
+            }
+        </style>
+        <header>
+            <div>time </div>
+            <div>title</div>
+            <div>img</div>
+        </header>
+        <footer>
+            <div>text</div>
+        </footer>
+        <style>
+            main {
+                margin: 0cm 1cm 2cm 1cm;
+                width: 18.5cm;
+
+            }
+
+            table {
+                break-inside: avoid-page;
+                border-collapse: collapse;
+                width: 18.5cm;
+            }
+
+            thead {
+                display: table-header-group;
+                background-color: #6f9dff !important;
+            }
+
+            .hidden {
+                height: 4.5cm;
+                visibility: hidden;
+                border: none;
+            }
+
+            th {
+                padding: 6px;
+                border: 1px solid black;
+                text-align: center;
+                width: auto;
+            }
+
+            tbody th {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        </style>
+        <main>
+            <table>
+
+                <thead>
+                    <tr class="hidden">
+                        <th>#</th>
+                        <th>url</th>
+                        <th>response code</th>
+                        <th>head response code</th>
+                        <th>ip</th>
+                        <th>time range</th>
+                        <th>date</th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>url</th>
+                        <th>response code</th>
+                        <th>head response code</th>
+                        <th>ip</th>
+                        <th>time range</th>
+                        <th>date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(el=> { %>
+                        <tr>
+                            <th><%=el._id%></th>
+                            <th><%=el.url%></th>
+                            <th>el.response code</th>
+                            <th><%= el.headStatus%></th>
+                            <th><%=el.ip%></th>
+                            <th><%=el.timeRange%></th>
+                            <th><%= el.date%></th>
+                        </tr>
+                        <% }) %>
+
+
+                </tbody>
+                <tfoot>
+                    <tr class="hidden">
+                        <th>#</th>
+                        <th>url</th>
+                        <th>response code</th>
+                        <th>head response code</th>
+                        <th>ip</th>
+                        <th>time range</th>
+                        <th>date</th>
+                    </tr>
+                    <tr>
+                </tfoot>
+            </table>
+        </main>
+
+    </body>
+</body>
+
+</html>
