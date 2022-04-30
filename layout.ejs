@@ -12,34 +12,27 @@
 
     <body style="-webkit-print-color-adjust: exact !important;">
         <style>
-            header,
             footer {
                 position: fixed;
-                border: 2px solid blue;
+                background-color: #0440c4;
+                color: white;
                 display: flex;
                 justify-content: space-between;
                 width: 18cm;
-                height: 2cm;
+                height: 1.5cm;
                 align-items: center;
                 margin: 32px 24px;
-                padding: 24px;
-            }
-
-            header {
-                top: 0;
+                padding: 16px;
+                direction: rtl;
             }
 
             footer {
                 bottom: 0;
             }
         </style>
-        <header>
-            <div>time </div>
-            <div>title</div>
-            <div>img</div>
-        </header>
+
         <footer>
-            <div>text</div>
+            <p>مرکز آپا دانشگاه کردستان</p>
         </footer>
         <style>
             main {
@@ -49,9 +42,8 @@
             }
 
             table {
-                break-inside: avoid-page;
                 border-collapse: collapse;
-                width: 18.5cm;
+                width: 18cm;
             }
 
             thead {
@@ -63,6 +55,9 @@
                 height: 4.5cm;
                 visibility: hidden;
                 border: none;
+            }
+            thead .hidden{
+                height: 1cm;
             }
 
             th {
@@ -80,10 +75,21 @@
             tbody tr:nth-child(even) {
                 background-color: #f2f2f2;
             }
+
+            .title {
+                display: flex;
+                direction: rtl;
+                align-items: center;
+                justify-content: space-between;
+            }
         </style>
         <main>
-            <table>
 
+            <table>
+                <div class="title">
+                    <h3>گزارش سامانه مدیریت وضعیت وبسایت ها </h3>
+                    <h4><%= time%></h4>
+                </div>
                 <thead>
                     <tr class="hidden">
                         <th>#</th>
@@ -107,13 +113,27 @@
                 <tbody>
                     <% data.forEach(el=> { %>
                         <tr>
-                            <th><%=el._id%></th>
-                            <th><%=el.url%></th>
-                            <th>el.response code</th>
-                            <th><%= el.headStatus%></th>
-                            <th><%=el.ip%></th>
-                            <th><%=el.timeRange%></th>
-                            <th><%= el.date%></th>
+                            <th>
+                                <%=el._id%>
+                            </th>
+                            <th>
+                                <%=el.url%>
+                            </th>
+                            <th>
+                                <%= el.status%>
+                            </th>
+                            <th>
+                                <%= el.headStatus%>
+                            </th>
+                            <th>
+                                <%=el.ip%>
+                            </th>
+                            <th>
+                                <%=el.timeRange%>
+                            </th>
+                            <th>
+                                <%= el.date%>
+                            </th>
                         </tr>
                         <% }) %>
 
