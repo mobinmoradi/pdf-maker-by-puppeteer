@@ -17,8 +17,8 @@ const pdfMaker = (data) => {
   (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.setContent(template({ data ,time:new Date().toLocaleDateString('fa-IR', options)}));
-    await page.pdf({ path: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}-${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}.pdf`, format: 'a4' });
+    await page.setContent(template({ data ,time:new Date().toLocaleDateString('fa-IR', options),name:'test',email:'test'}));
+    await page.pdf({printBackground: true, path: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}-${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}.pdf`, format: 'a4' });
     await browser.close();
   })();
 }

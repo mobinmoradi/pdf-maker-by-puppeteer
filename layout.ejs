@@ -2,159 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    @import url('https://v1.fontapi.ir/css/Nazanin');
+  </style>
 </head>
 
 <body>
 
-    <body style="-webkit-print-color-adjust: exact !important;">
-        <style>
-            footer {
-                position: fixed;
-                background-color: #0440c4;
-                color: white;
-                display: flex;
-                justify-content: space-between;
-                width: 18cm;
-                height: 1.5cm;
-                align-items: center;
-                margin: 32px 24px;
-                padding: 16px;
-                direction: rtl;
-            }
+  <body style="
+        counter-reset: section;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      ">
+    <style>
+      * {
+        font-family: sans-serif;
+      }
 
-            footer {
-                bottom: 0;
-            }
-        </style>
+      footer {
+        position: fixed;
+        background-color: #6e8ed3;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        width: 18cm;
+        height: 1.5cm;
+        align-items: center;
+        margin: 32px 24px;
+        padding: 12px;
+        direction: rtl;
+      }
 
-        <footer>
-            <p>مرکز آپا دانشگاه کردستان</p>
-        </footer>
-        <style>
-            main {
-                margin: 0cm 1cm 2cm 1cm;
-                width: 18.5cm;
+      footer {
+        bottom: 0;
+        text-align: center;
+      }
 
-            }
+      .h-line {
+        display: inline-block;
+        width: 1px;
+        background: white;
+        height: 17px;
+        margin: 0 4px;
+      }
 
-            table {
-                border-collapse: collapse;
-                width: 18cm;
-            }
+      .w-full {
+        width: 100%;
+      }
 
-            thead {
-                display: table-header-group;
-                background-color: #6f9dff !important;
-            }
-
-            .hidden {
-                height: 4.5cm;
-                visibility: hidden;
-                border: none;
-            }
-            thead .hidden{
-                height: 1cm;
-            }
-
-            th {
-                padding: 6px;
-                border: 1px solid black;
-                text-align: center;
-                width: auto;
-            }
-
-            tbody th {
-                font-size: 14px;
-                font-weight: 400;
-            }
-
-            tbody tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
-
-            .title {
-                display: flex;
-                direction: rtl;
-                align-items: center;
-                justify-content: space-between;
-            }
-        </style>
-        <main>
-
-            <table>
-                <div class="title">
-                    <h3>گزارش سامانه مدیریت وضعیت وبسایت ها </h3>
-                    <h4><%= time%></h4>
-                </div>
-                <thead>
-                    <tr class="hidden">
-                        <th>#</th>
-                        <th>url</th>
-                        <th>response code</th>
-                        <th>head response code</th>
-                        <th>ip</th>
-                        <th>time range</th>
-                        <th>date</th>
-                    </tr>
-                    <tr>
-                        <th>#</th>
-                        <th>url</th>
-                        <th>response code</th>
-                        <th>head response code</th>
-                        <th>ip</th>
-                        <th>time range</th>
-                        <th>date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% data.forEach(el=> { %>
-                        <tr>
-                            <th>
-                                <%=el._id%>
-                            </th>
-                            <th>
-                                <%=el.url%>
-                            </th>
-                            <th>
-                                <%= el.status%>
-                            </th>
-                            <th>
-                                <%= el.headStatus%>
-                            </th>
-                            <th>
-                                <%=el.ip%>
-                            </th>
-                            <th>
-                                <%=el.timeRange%>
-                            </th>
-                            <th>
-                                <%= el.date%>
-                            </th>
-                        </tr>
-                        <% }) %>
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
 
 
-                </tbody>
-                <tfoot>
-                    <tr class="hidden">
-                        <th>#</th>
-                        <th>url</th>
-                        <th>response code</th>
-                        <th>head response code</th>
-                        <th>ip</th>
-                        <th>time range</th>
-                        <th>date</th>
-                    </tr>
-                    <tr>
-                </tfoot>
-            </table>
-        </main>
+    <footer>
+      <p class="w-full flex"><span>مرکز آپا دانشگاه کردستان</span> <span class="h-line"> </span>
+        <span>cert.uok.ac.ir</span>
+      </p>
+    </footer>
+    <style>
+      main {
+        margin: 0cm 1cm 0cm 1cm;
+        width: 18.5cm;
+      }
 
-    </body>
+      table {
+        border-collapse: collapse;
+        width: 18cm;
+      }
+
+      thead {
+        display: table-header-group;
+        background-color: #aec8ff !important;
+      }
+
+      .hidden {
+        height: 4cm;
+        visibility: hidden;
+        border: none;
+      }
+
+      thead .hidden {
+        height: 1cm;
+      }
+
+      th {
+        padding: 4px;
+        border: 1px solid black;
+        text-align: center;
+        width: auto;
+      }
+
+      tbody th {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #d4d4d4;
+      }
+
+      .title {
+        display: flex;
+        direction: rtl;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .v-line {
+        width: 8cm;
+        height: 2px;
+        background: #000;
+        ;
+
+      }
+
+      .f-m {
+        font-size: medium;
+      }
+
+      .border-right {
+        border-right: 1mm solid black;
+        padding-right: 4mm;
+      }
+    </style>
+    <main>
+      <table>
+        <div class="title">
+          <h2>گزارش سامانه بررسی وضعیت سرور</h2>
+          <div class="v-line"></div>
+          <h4>
+            <%= time%>
+          </h4>
+        </div>
+        <div class="border-right">
+          <h5 dir="rtl" class="f-m">نام کاربر : <%= name%>
+          </h5>
+          <h5 dir="rtl" class="f-m">ایمیل : <%= email%>
+          </h5>
+        </div>
+
+        <thead>
+          <tr class="hidden">
+            <th>#</th>
+            <th>url</th>
+            <th>response code</th>
+            <th>head response code</th>
+            <th>ip</th>
+            <th>time range</th>
+            <th>date</th>
+          </tr>
+          <tr>
+            <th>#</th>
+            <th>url</th>
+            <th>response code</th>
+            <th>head response code</th>
+            <th>ip</th>
+            <th>time range</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(el=> { %>
+            <tr>
+              <th>
+                <%=el.row%>
+              </th>
+              <th>
+                <%=el.url%>
+              </th>
+              <th>
+                <%= el.status%>
+              </th>
+              <th>
+                <%= el.headStatus%>
+              </th>
+              <th>
+                <%=el.ip%>
+              </th>
+              <th>
+                <%=el.timeRange%>
+              </th>
+              <th>
+                <%= el.newDate%>
+              </th>
+            </tr>
+            <% }) %>
+        </tbody>
+        <tfoot>
+          <tr class="hidden">
+            <th>#</th>
+            <th>url</th>
+            <th>response code</th>
+            <th>head response code</th>
+            <th>ip</th>
+            <th>time range</th>
+            <th>date</th>
+          </tr>
+          <tr></tr>
+        </tfoot>
+      </table>
+    </main>
+  </body>
 </body>
 
 </html>
