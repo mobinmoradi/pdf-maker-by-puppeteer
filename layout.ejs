@@ -1,215 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <style>
-    @import url('https://v1.fontapi.ir/css/Nazanin');
-  </style>
-</head>
-
-<body>
-
-  <body style="
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: 'B Nazanin';
+        src: url('BNazanin.woff2') format('woff2'),
+          url('BNazanin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
         counter-reset: section;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-      ">
-    <style>
-      * {
-        font-family: sans-serif;
-      }
-
-      footer {
-        position: fixed;
-        background-color: #6e8ed3;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        width: 18cm;
-        height: 1.5cm;
-        align-items: center;
-        margin: 32px 24px;
-        padding: 12px;
-        direction: rtl;
-      }
-
-      footer {
-        bottom: 0;
-        text-align: center;
-      }
-
-      .h-line {
-        display: inline-block;
-        width: 1px;
-        background: white;
-        height: 17px;
-        margin: 0 4px;
-      }
-
-      .w-full {
-        width: 100%;
-      }
-
-      .flex {
-        display: flex;
-        justify-content: center;
       }
     </style>
+  </head>
 
+  <body>
+    <body>
+      <style>
+        footer {
+          position: fixed;
+          background-color: #6e8ed3;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          width: 18cm;
+          height: 1.5cm;
+          align-items: center;
+          margin: 32px 24px;
+          padding: 12px;
+          direction: rtl;
+        }
 
-    <footer>
-      <p class="w-full flex"><span>مرکز آپا دانشگاه کردستان</span> <span class="h-line"> </span>
-        <span>cert.uok.ac.ir</span>
-      </p>
-    </footer>
-    <style>
-      main {
-        margin: 0cm 1cm 0cm 1cm;
-        width: 18.5cm;
-      }
+        footer {
+          bottom: 0;
+          text-align: center;
+        }
 
-      table {
-        border-collapse: collapse;
-        width: 18cm;
-      }
+        .h-line {
+          display: inline-block;
+          width: 1px;
+          background: white;
+          height: 17px;
+          margin: 0 4px;
+        }
 
-      thead {
-        display: table-header-group;
-        background-color: #aec8ff !important;
-      }
+        .w-full {
+          width: 100%;
+        }
 
-      .hidden {
-        height: 4cm;
-        visibility: hidden;
-        border: none;
-      }
+        .flex {
+          display: flex;
+          justify-content: center;
+        }
+      </style>
 
-      thead .hidden {
-        height: 1cm;
-      }
+      <footer>
+        <p class="flex w-full">
+          <span>مرکز آپا دانشگاه کردستان</span> <span class="h-line"> </span>
+          <span>cert.uok.ac.ir</span>
+        </p>
+      </footer>
+      <style>
+        main {
+          margin: 0cm 1cm 0cm 1cm;
+          width: 18.5cm;
+        }
 
-      th {
-        padding: 4px;
-        border: 1px solid black;
-        text-align: center;
-        width: auto;
-      }
+        table {
+          border-collapse: collapse;
+          width: 18cm;
+        }
 
-      tbody th {
-        font-size: 14px;
-        font-weight: 400;
-      }
+        thead {
+          display: table-header-group;
+          background-color: #9abaff !important;
+        }
 
-      tbody tr:nth-child(even) {
-        background-color: #d4d4d4;
-      }
+        .hidden {
+          height: 4cm;
+          visibility: hidden;
+          border: none;
+        }
 
-      .title {
-        display: flex;
-        direction: rtl;
-        align-items: center;
-        justify-content: space-between;
-      }
+        thead .hidden {
+          height: 1cm;
+        }
 
-      .v-line {
-        width: 8cm;
-        height: 2px;
-        background: #000;
-        ;
+        th {
+          padding: 4px;
+          border: 1px solid black;
+          text-align: center;
+          width: auto;
+        }
 
-      }
+        tbody th {
+          font-size: 14px;
+          font-weight: 400;
+        }
 
-      .f-m {
-        font-size: medium;
-      }
+        tbody tr:nth-child(even) {
+          background-color: #e6e6e6;
+        }
 
-      .border-right {
-        border-right: 1mm solid black;
-        padding-right: 4mm;
-      }
-    </style>
-    <main>
-      <table>
-        <div class="title">
-          <h2>گزارش سامانه بررسی وضعیت سرور</h2>
-          <div class="v-line"></div>
-          <h4>
-            <%= time%>
-          </h4>
-        </div>
-        <div class="border-right">
-          <h5 dir="rtl" class="f-m">نام کاربر : <%= name%>
-          </h5>
-          <h5 dir="rtl" class="f-m">ایمیل : <%= email%>
-          </h5>
-        </div>
+        .title {
+          font-family: 'Baloo Bhaijaan 2', cursive;
+          display: flex;
+          direction: rtl;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .title > div {
+          align-items: flex-end;
+        }
 
-        <thead>
-          <tr class="hidden">
-            <th>#</th>
-            <th>url</th>
-            <th>response code</th>
-            <th>head response code</th>
-            <th>ip</th>
-            <th>time range</th>
-            <th>date</th>
-          </tr>
-          <tr>
-            <th>#</th>
-            <th>url</th>
-            <th>response code</th>
-            <th>head response code</th>
-            <th>ip</th>
-            <th>time range</th>
-            <th>date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% data.forEach(el=> { %>
+        .v-line {
+          width: 7.5cm;
+          height: 2px;
+          background: #000;
+        }
+
+        .f-m {
+          font-size: medium;
+        }
+
+        .border-right {
+          font-family: 'Baloo Bhaijaan 2', cursive;
+          border-right: 1mm solid black;
+          padding-right: 4mm;
+        }
+        .f-s {
+          font-size: small;
+          margin-right: 5.5cm;
+          margin-top: 0;
+        }
+        h2 {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          margin-top: 1cm;
+        }
+      </style>
+      <main>
+        <table>
+          <div class="title">
+            <div>
+              <h2>گزارش سامانه پایش وب‌سایت ویرا</h2>
+              <p class="f-s">sitemon.uok.ac.ir</p>
+            </div>
+            <div class="v-line"></div>
+            <h4><%= time%></h4>
+          </div>
+          <div class="border-right">
+            <h5 dir="rtl" class="f-m">نام کاربر : <%= name%></h5>
+            <h5 dir="rtl" class="f-m">آدرس ایمیل : <%= email%></h5>
+          </div>
+
+          <thead>
+            <tr class="hidden">
+              <th>#</th>
+              <th>url</th>
+              <th>response code</th>
+              <th>head response code</th>
+              <th>ip</th>
+              <th>time range</th>
+              <th>date</th>
+            </tr>
             <tr>
-              <th>
-                <%=el.row%>
-              </th>
-              <th>
-                <%=el.url%>
-              </th>
-              <th>
-                <%= el.status%>
-              </th>
-              <th>
-                <%= el.headStatus%>
-              </th>
-              <th>
-                <%=el.ip%>
-              </th>
-              <th>
-                <%=el.timeRange%>
-              </th>
-              <th>
-                <%= el.newDate%>
-              </th>
+              <th>#</th>
+              <th>url</th>
+              <th>response code</th>
+              <th>head response code</th>
+              <th>ip</th>
+              <th>time range</th>
+              <th>date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% data.forEach(el=> { %>
+            <tr>
+              <th><%=el.row%></th>
+              <th><%=el.url%></th>
+              <th><%= el.status%></th>
+              <th><%= el.headStatus%></th>
+              <th><%=el.ip%></th>
+              <th><%=el.timeRange%></th>
+              <th><%= el.date%></th>
             </tr>
             <% }) %>
-        </tbody>
-        <tfoot>
-          <tr class="hidden">
-            <th>#</th>
-            <th>url</th>
-            <th>response code</th>
-            <th>head response code</th>
-            <th>ip</th>
-            <th>time range</th>
-            <th>date</th>
-          </tr>
-          <tr></tr>
-        </tfoot>
-      </table>
-    </main>
+          </tbody>
+          <tfoot>
+            <tr class="hidden">
+              <th>#</th>
+              <th>url</th>
+              <th>response code</th>
+              <th>head response code</th>
+              <th>ip</th>
+              <th>time range</th>
+              <th>date</th>
+            </tr>
+            <tr></tr>
+          </tfoot>
+        </table>
+      </main>
+    </body>
   </body>
-</body>
-
 </html>
